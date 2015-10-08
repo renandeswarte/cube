@@ -1,0 +1,146 @@
+.container .button-container {
+  height: 39px;
+  width: 200px;
+  margin: 0px auto 50px;
+}
+.container .button-container button {
+  color: #fff;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 5px 8px 5px;
+  outline: none;
+}
+.container .button-container button.manual {
+  float: left;
+  background-color: #55f;
+}
+.container .button-container button.auto {
+  float: right;
+}
+.container .button-container.automatic .auto {
+  background-color: #55f;
+}
+.container .button-container.automatic .manual {
+  background-color: #ccc;
+}
+.container .cube-container {
+  -webkit-transform: perspective(600);
+  -moz-transform: perspective(600);
+  transform: perspective(600);
+  padding: 65px 50px;
+  margin: 0px auto;
+  width: 250px;
+}
+.container .cube-container #cube {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 40px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.container .cube-container #cube.autoSpin {
+  -webkit-animation: rotateCube 8s infinite linear;
+  -moz-animation: rotateCube 8s infinite linear;
+  animation: rotateCube 8s infinite linear;
+}
+.container .cube-container #cube .face {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.container .cube-container #cube .front {
+  background-color: #f00;
+  -webkit-transform: translateZ(100px);
+  -moz-transform: translateZ(100px);
+  transform: translateZ(100px);
+}
+.container .cube-container #cube .back {
+  background-color: #0f0;
+  -webkit-transform: translateZ(-100px) rotateX(180deg);
+  -moz-transform: translateZ(-100px) rotateX(180deg);
+  transform: translateZ(-100px) rotateX(180deg);
+}
+.container .cube-container #cube .left {
+  background-color: #00f;
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+  -moz-transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(90deg) translateZ(100px);
+}
+.container .cube-container #cube .right {
+  background-color: #ff0;
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+  -moz-transform: rotateY(-90deg) translateZ(100px);
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.container .cube-container #cube .up {
+  background-color: #0ff;
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+  -moz-transform: rotateX(90deg) translateZ(100px);
+  transform: rotateX(90deg) translateZ(100px);
+}
+.container .cube-container #cube .down {
+  background-color: #f0f;
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+  -moz-transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(100px);
+}
+@-webkit-keyframes rotateCube {
+  0% {
+    -webkit-transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+@-moz-keyframes rotateCube {
+  0% {
+    -moz-transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    -moz-transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+@-moz-keyframes rotateCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+@-webkit-keyframes rotateCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+@-o-keyframes rotateCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
+@keyframes rotateCube {
+  0% {
+    transform: translateZ(-100px) rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: translateZ(-100px) rotateX(360deg) rotateY(360deg);
+  }
+}
